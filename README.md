@@ -125,8 +125,8 @@ get("/rest/test", (request, response) -> {
 ### 启动与运行过程中JVM信息
 ![jvm信息][19]
 ### 压力测试
-四种框架在相同环境下，并发量100执行10000次请求【上文例子中方法（模拟业务处理时间为100ms）】得到的数据如下：
-![压力测试][20]
+四种框架在相同环境下，使用[压测工具][20]siege并发量100执行10000次请求【上文例子中方法（模拟业务处理时间为100ms）】得到的数据如下：
+![压力测试][21]
 
 ## 三、总结
 从上述测试中可是看出：
@@ -156,4 +156,5 @@ get("/rest/test", (request, response) -> {
   [17]: https://github.com/GJguojin/restful.git
   [18]: ./picture/class_loading.png
   [19]: ./picture/start_run.png
-  [20]: ./picture/stress_test.png
+  [20]: https://github.com/GJguojin/restful/tree/master/webtest
+  [21]: ./picture/stress_test.png
