@@ -1,0 +1,18 @@
+windows平台
+
+进入该程序目录，在dos命令行里面使用该工具。
+
+
+我们把参数给大家简单说明一下。
+　　
+-parallel   简写-p ：含义是并发的用户进程数。
+　　
+-fetches    简写-f ：含义是总计的访问次数
+　　
+-rate       简写-p ：含义是每秒的访问频率
+　　
+-seconds    简写-s ：含义是总计的访问时间
+
+http_load -p 30 -s 60 urllist.txt
+
+http://www.spasvo.com/news/html/2013922151848_2.html

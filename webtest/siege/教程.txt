@@ -1,0 +1,15 @@
+windows平台
+
+进入该程序目录，在dos命令行里面使用该工具。
+
+
+siege -c 200 -r 10 -f example.url
+
+　　
+-c是并发量.
+-r是重复次数。 
+url文件就是一个文本，每行都是一个url，它会从里面随机访问的。
+
+
+
+http://www.spasvo.com/news/html/2013922151848_2.html
