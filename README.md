@@ -119,14 +119,22 @@ get("/rest/test", (request, response) -> {
 ---
 
 ## 二、四种框架性能比较
-将四种框架运用到SpringBoot中，在相同环境启动，相应的类加载量、堆栈和线程数比较如下：
+将四种框架运用到SpringBoot中，在相同环境启动，相应的类加载量、堆栈和线程数比较如下（[测试数据][17]）：
 ### 类加载量
-![类加载量比较][17]
+![类加载量比较][18]
 ### 启动与运行过程中JVM信息
-![jvm信息][18]
+![jvm信息][19]
 ### 压力测试
 四种框架在相同环境下，并发量100执行10000次请求【上文例子中方法（模拟业务处理时间为100ms）】得到的数据如下：
-![压力测试][19]
+![压力测试][20]
+
+## 三、总结
+从上述测试中可是看出：
+
+- SpringMVC不做评论。 
+- Spark Framework总体最优，但其向上封装过于简陋，使用其开发对现有项目修改过大，而且框架太轻量量担心部分功能不能实现。
+- RESTEasy性能最优，但其在SpringBoot使用中依赖了SpringMVC.jar,使用起来有点厚重。
+- Jsrsey性能处于两者之间，个人推荐使用。
 
 
   [1]: http://colobu.com/2015/11/15/best-available-java-restful-micro-frameworks/
@@ -145,6 +153,7 @@ get("/rest/test", (request, response) -> {
   [14]: https://github.com/perwendel/spark
   [15]: http://sparkjava.com/documentation.html
   [16]: http://spring.io/
-  [17]: ./picture/class_loading.png
-  [18]: ./picture/start_run.png
-  [19]: ./picture/stress_test.png
+  [17]: https://github.com/GJguojin/restful.git
+  [18]: ./picture/class_loading.png
+  [19]: ./picture/start_run.png
+  [20]: ./picture/stress_test.png
