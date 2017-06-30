@@ -115,7 +115,7 @@ get("/rest/test", (request, response) -> {
 ## 二、四种框架性能比较
 将四种框架运用到SpringBoot中，在相同环境启动，相应的类加载量、堆栈和线程数比较如下：
 ### 类加载量
-
+![类加载量比较][13]
 
 
   [1]: http://colobu.com/2015/11/15/best-available-java-restful-micro-frameworks/
@@ -130,3 +130,4 @@ get("/rest/test", (request, response) -> {
   [10]: https://github.com/perwendel/spark
   [11]: http://sparkjava.com/documentation.html
   [12]: http://spring.io/
+  [13]: ./picture/class_loading.png
